@@ -4,7 +4,7 @@
 class Hamster {
 
 public:
-
+    Hamster();
     void Play();
     void Stroke();
     void Feed();
@@ -22,6 +22,9 @@ private:
     int alive;
 };
 
+
+Hamster::Hamster(): food(0), watter(0), need_sleep(5), happy(5), alive(1){
+}
 void Hamster::Play() {
     if (alive) {
         if (watter && need_sleep && food) {
@@ -123,6 +126,8 @@ void Hamster::Sleep() {
     else
         std::cout << "I don't need sleep." << std::endl;
 }
+
+
 
 
 int main() {
